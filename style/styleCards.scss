@@ -1,0 +1,458 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+$bg-primary: #00669F;
+$bg-secondary: #1CD1B0;
+$tx-primary: #FBFFFD;
+$tx-secondary: #FFFFFF;
+
+html, body{
+    height: 100%;
+}
+
+
+/*body*/
+body{
+    font-family: 'Roboto';
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.2fr 3fr 0.1fr;
+    button{
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: $bg-secondary;
+    }
+    .mas{
+        background-color: $bg-primary;
+        text-align: center;
+        border: $bg-secondary 3px solid;
+        color: #F3F3F3;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 400;
+        position: fixed;
+        right: 35px;
+        top: 350px;
+        border-radius: 50%;
+        /*height: 40px;*/
+        width: 40px;
+        z-index: 2;
+    }
+    .mas:hover{
+        background-color:#D1891C;
+        border: $bg-primary 3px solid;
+        color: $bg-primary;
+    }
+    /*header*/
+    header{
+        grid-column: 1/7;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        font-family: 'Inter';
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+        div{
+            background-color: $bg-secondary;
+            color: #000000;
+            font-weight: 400;
+            grid-column: 1/7;
+            grid-row: 1/2;
+            font-size: 16px;
+            padding-left: 15px;
+        }
+        .logo{
+            background-color: $bg-primary;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+            grid-column: 1/7;
+            grid-row: 2/3;
+            text-decoration: none;
+            padding: 0px 0px 0px 10px;
+            h1{
+                color: $tx-secondary;
+                font-size: 30px;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+        nav{
+            background-color: #001D2D;
+            display: flex;
+            justify-content: flex-end;
+            grid-column: 1/7;
+            grid-row: 3/4;
+            padding: 2px 0px;
+            a{
+                color: $tx-secondary;
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+                padding-right: 15px;
+            }
+        }
+    }
+    /*main*/
+    main{
+        font-family: 'Roboto';
+        font-style: normal;
+        grid-column: 1/7;
+        grid-row: 2/3;
+        height: auto;
+        display: grid;
+        row-gap: 60px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        margin: 20px 0px 80px 0px;
+        section{
+            .texto{
+                .verMas{
+                    transition: background-color 0.7s ;
+                }
+                .verMas:hover{
+                    background-color: $bg-secondary;
+                }
+            }
+        }
+        .batman{
+            display: grid;
+            grid-column: 2/6;
+            grid-row: 1/2;
+            position: relative;
+            width: 220px;
+            .fondo{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 100%;
+                width: 100%;
+            }
+            .personaje{
+                width: 40%;
+                border-radius: 50%;
+                position: absolute;
+                top: 90px;
+                left: 65px;
+            }
+            .corazon{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 10%;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #F3F3F3;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .titulo{
+                    text-align: center;
+                    padding-top: 40px;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                }
+                .parrafo{
+                    font-weight: 400;
+                    font-size: 0.65rem ;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+                .verMas{
+                    background-color: $bg-primary;
+                    border-radius: 7px;
+                    border: none;
+                    width: 40%;
+                    color: #F3F3F3;
+                    font-size: 0.65rem;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .mujerMaravilla{
+            display: grid;
+            grid-column: 2/6;
+            grid-row: 2/3;
+            position: relative;
+            width: 220px;
+            .fondo{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 100%;
+                width: 100%;
+            }
+            .personaje{
+                width: 40%;
+                border-radius: 50%;
+                position: absolute;
+                top: 90px;
+                left: 65px;
+            }
+            .corazon{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 10%;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #F3F3F3;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .titulo{
+                    text-align: center;
+                    padding-top: 40px;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                }
+                .parrafo{
+                    font-weight: 400;
+                    font-size: 0.65rem ;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+                .verMas{
+                    background-color: $bg-primary;
+                    border-radius: 7px;
+                    border: none;
+                    width: 40%;
+                    color: #F3F3F3;
+                    font-size: 0.65rem;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .superman{
+            display: grid;
+            grid-column: 2/6;
+            grid-row: 3/4;
+            position: relative;
+            width: 220px;
+            .fondo{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 100%;
+                width: 100%;
+            }
+            .supUno{
+                .personaje{
+                    width: 40%;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 90px;
+                    left: 65px;
+                }
+            }
+            .supDos{
+                display: none;
+            }
+            .corazon{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 10%;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #F3F3F3;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .titulo{
+                    text-align: center;
+                    padding-top: 40px;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                }
+                .parrafo{
+                    font-weight: 400;
+                    font-size: 0.65rem ;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+                .verMas{
+                    background-color: $bg-primary;
+                    border-radius: 7px;
+                    border: none;
+                    width: 40%;
+                    color: #F3F3F3;
+                    font-size: 0.65rem;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .harley{
+            display: none;
+        }
+    }
+    /*footer*/
+    footer{
+        background-color: $bg-primary;
+        color: #F3F3F3;
+        grid-column: 1/7;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        .github{
+            grid-column: 6/7;
+            grid-row: 1/2;
+        }
+        .linkedin{
+            color: #FFFFFF;
+            .fa-brand{
+                font-size: 30px;
+            }
+        }
+        .derechos{
+            grid-row: 1/2;
+            grid-column: 2/6;
+            color: #fff9f9;
+            font-size: 0.65rem;
+            font-weight: 400;
+            line-height: 42px;
+        }
+    }
+}
+/*media*/
+@media(min-width: 575px){
+    body{
+        grid-template-columns: repeat(12, 1fr);
+        /*header*/
+        header{
+            grid-column: 1/13;
+            grid-row: 1/2;
+        }
+        /*main*/
+        main{
+            grid-column: 1/13;
+            grid-row: 2/3;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr 1fr;
+            .batman{
+                grid-column: 2/6;
+                grid-row: 1/2;
+            }
+            .mujerMaravilla{
+                grid-column: 8/12;
+                grid-row: 1/2;
+            }
+            .superman{
+                grid-column: 2/6;
+                grid-row: 2/3;
+                .supUno{
+                    display: none;
+                }
+                .supDos{
+                    display: block;
+                    .personaje{
+                        width: 40%;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 90px;
+                        left: 65px;
+                    }
+                }
+            }
+            .harley{
+                display: block;
+                display: grid;
+                grid-column: 8/12;
+                grid-row: 2/3;
+                position: relative;
+                width: 220px;
+            }
+            .fondo{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 100%;
+                width: 100%;
+            }
+            .personaje{
+                width: 40%;
+                border-radius: 50%;
+                position: absolute;
+                top: 90px;
+                left: 65px;
+            }
+            .corazon{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 10%;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #F3F3F3;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .titulo{
+                    text-align: center;
+                    padding-top: 40px;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                }
+                .parrafo{
+                    font-weight: 400;
+                    font-size: 0.65rem ;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+                .verMas{
+                    background-color: $bg-primary;
+                    border-radius: 7px;
+                    border: none;
+                    width: 40%;
+                    color: #F3F3F3;
+                    font-size: 0.65rem;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        /*footer*/
+        footer{
+            grid-column: 1/13;
+            grid-row: 3/4;
+            .github{
+                img{
+                    width: 35%;
+                }
+            }
+        }
+    }
+}

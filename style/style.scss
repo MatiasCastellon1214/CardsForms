@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /*border: 1px solid red;*/
+}
+
+$bg-primary: #00669F;
+$bg-secondary: #1CD1B0;
+$tx-primary: #FBFFFD;
+$tx-secondary: #FFFFFF;
+
+body{
+    font-family: 'Inter';
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .mas{
+        background-color: $bg-primary;
+        text-align: center;
+        border: $bg-secondary 3px solid;
+        color: #F3F3F3;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 400;
+        position: fixed;
+        right: 35px;
+        top: 350px;
+        border-radius: 50%;
+        width: 40px;
+        z-index: 2;
+    }
+    .mas:hover{
+        background-color:#D1891C;
+        border: $bg-primary 3px solid;
+        color: $bg-primary;
+    }
+    header{
+        grid-column: 1/13;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+        div{
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: $bg-secondary;
+            grid-column: 1/13;
+            grid-row: 1/2;
+            padding: 2px 0px 2px 10px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            background-color: $bg-primary;
+            grid-column: 1/13;
+            grid-row: 2/3;
+            text-decoration: none;
+            padding: 0px 0px 0px 10px;
+            h1{
+                color: $tx-secondary;
+                font-size: 30px;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+        nav{
+            background-color: #001D2D;
+            display: flex;
+            justify-content: flex-end;
+            grid-column: 1/13;
+            grid-row: 3/4;
+            padding: 2px 0px;
+            a{
+                color: $tx-secondary;
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+                padding-right: 15px;
+            }
+        }
+    }
+    main{
+        grid-column: 1/13;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 50px 0px;
+        .forms{
+            background-color: $bg-primary;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 50px;
+            grid-column: 3/11;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto 0.2fr 1fr 1fr 2.5fr 1fr;
+            gap: 25px;
+            h2{
+                grid-column: 3/9;
+                grid-row: 1/2;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 72px;
+                text-align: center;
+                color: $tx-primary;
+            }
+            p{
+                color: $tx-secondary;
+                grid-column: 2/10;
+                grid-row: 2/3;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 14px;
+                text-align: center;
+            }
+            .nombre{
+                justify-self: flex-end;
+                grid-column: 2/6;
+                grid-row: 3/4;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                label{
+                    color: $tx-secondary;
+                    font-weight: 100;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                input{
+                    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 15.3407px;
+                    color: #000000;
+                    font-weight: 300;
+                    font-size: 20px;
+                    padding: 18px 10px ;
+                }
+            }
+            .especie{
+                justify-self: flex-start;
+                grid-column: 6/10;
+                grid-row: 3/4;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                label{
+                    color: $tx-secondary;
+                    font-weight: 100;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                select{
+                    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 15.3407px;
+                    color: #000000;
+                    font-weight: 300;
+                    font-size: 20px;
+                    padding: 18px 10px ;
+                }
+            }
+            .fecha{
+                justify-self: flex-end;
+                grid-column: 2/6;
+                grid-row: 4/5;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                label{
+                    color: $tx-secondary;
+                    font-weight: 100;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                input{
+                    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 15.3407px;
+                    color: #000000;
+                    font-weight: 300;
+                    font-size: 20px;
+                    padding: 18px 10px;
+                }
+            }
+            .archivo{
+                justify-self: flex-start;
+                grid-column: 6/10;
+                grid-row: 4/5;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                label{
+                    color: $tx-secondary;
+                    font-weight: 100;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                input[type= file]{
+                    transform: scale(1);
+                    color: #000000;
+                    font-weight: 200;
+                    font-size: 15px;
+                    padding: 20px 0px;
+                }
+            }
+            .area{
+                justify-self: flex-start;
+                grid-column: 2/6;
+                grid-row: 5/6;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                height: 100%;
+                width: 100%;
+                textarea{
+                    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 15px;
+                    color: #000000;
+                    font-weight: 200;
+                    font-size: 15px;
+                    height: 100%;
+                    padding-left: 10px;
+                }
+            }
+            .podPer{
+                justify-self: flex-start;
+                grid-column: 6/10;
+                grid-row: 5/6;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                height: 100%;
+                width: 100%;
+                .poderes{
+                    display: flex;
+                    display: inline-block;
+                    flex-direction: column;
+                    p{
+                        color: $tx-secondary;
+                        font-weight: 200;
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                        text-align: left;
+                    }
+                    input[type=checkbox]{
+                        transform: scale(1.5);
+                        margin-left: 5px;
+                    }
+                    label{
+                        color: $tx-secondary;
+                        font-weight: 300;
+                        font-size: 16px;
+                        padding-left: 5px;
+                    }
+                }
+                hr{
+                    border: 1px solid #CCCCCC;
+                    margin: 10px 0px;
+                }
+                .personaje{
+                    display: flex;
+                    display: inline-block;
+                    flex-direction: column;
+                    p{
+                        color: $tx-secondary;
+                        font-weight: 200;
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                        text-align: left;
+                    }
+                    input[type= radio]{
+                        transform: scale(1.5);
+                        margin-left: 5px;
+                    }
+                    label{
+                        color: $tx-secondary;
+                        font-weight: 300;
+                        font-size: 20px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            input[type= submit]{
+                background-color: $bg-secondary;
+                border: none;
+                border-radius: 23px;
+                color: #000000;
+                font-size: 40px;
+                font-weight: 700;
+                grid-column: 3/9;
+                grid-row: 6/7;
+                padding: 15px 120px;
+                cursor: pointer;
+            }
+            input[type= submit]:hover{
+                background-color: #D1891C;
+                color: #CCCCCC;
+            }
+        }
+    }
+    footer{
+        background-color: $bg-primary;
+        grid-column: 1/13;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        .github{
+            grid-column: 11/13;
+            grid-row: 1/2;
+            img{
+                width: 35%;
+            }
+        }
+        .linkedin{
+            color: #FFFFFF;
+            .fa-brand{
+                font-size: 30px;
+            }
+        }
+        .derechos{
+            grid-column: 2/12;
+            grid-row: 1/2;
+            color: #fff9f9;
+            font-size: 0.65rem;
+            font-weight: 400;
+            line-height: 42px;
+        }
+    }
+}
+
+@media(max-width: 850px){
+    body{
+        main{
+            .forms{
+                grid-template-rows: repeat(9, auto);
+                gap: 0px;
+                row-gap: 20px;
+                h2{
+                    font-size: 35px;
+                    grid-column: 2/10;
+                    grid-row: 1/2;
+                }
+                p{
+                    font-size: 15px;
+                    grid-column: 2/10;
+                    grid-row: 2/3;
+                }
+                .nombre{
+                    grid-column: 2/10;
+                    grid-row: 3/4;
+                    label{
+                        font-size: 17px;
+                    }
+                    input{
+                        font-size: 17px;
+                        padding: 16px 10px;
+                    }
+                }
+                .especie{
+                    grid-column: 2/10;
+                    grid-row: 4/5;
+                    label{
+                        font-size: 17px;
+                    }
+                    select{
+                        font-size: 17px;
+                        padding: 16px 10px;
+                    }
+                }
+                .fecha{
+                    grid-column: 2/10;
+                    grid-row: 5/6;
+                    label{
+                        font-size: 17px;
+                    }
+                    input{
+                        font-size: 17px;
+                        padding: 16px 10px;
+                    }
+                }
+                .archivo{
+                    grid-column: 2/10;
+                    grid-row: 6/7;
+                    margin-top: 15px;
+                    label{
+                        font-size: 17px;
+                    }
+                    input[type= file]{
+                        font-size: 13px;
+                        padding: 0px 0px;
+                    }
+                }
+                .area{
+                    grid-column: 2/10;
+                    grid-row: 7/8;
+                }
+                .podPer{
+                    grid-column: 2/9;
+                    grid-row: 8/9;
+                    margin-top: 70px;
+                    .poderes{
+                        p{
+                            font-size: 16px;
+                        }
+                        label{
+                            font-size: 13px;
+                        }
+                    }
+                    .personaje{
+                        p{
+                            font-size: 16px;
+                        }
+                        label{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                input[type= submit]{
+                    font-size: 35px;
+                    grid-column: 3/9;
+                    grid-row: 9/10;
+                    padding: 5px 30px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        footer{
+            img{
+                width: 70%;
+            }
+        }
+    }
+}

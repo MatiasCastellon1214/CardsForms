@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  /*border: 1px solid red;*/
+}
+
+body {
+  font-family: "Inter";
+  font-style: normal;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+body .mas {
+  background-color: #00669F;
+  text-align: center;
+  border: #1CD1B0 3px solid;
+  color: #F3F3F3;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+  position: fixed;
+  right: 35px;
+  top: 350px;
+  border-radius: 50%;
+  width: 40px;
+  z-index: 2;
+}
+body .mas:hover {
+  background-color: #D1891C;
+  border: #00669F 3px solid;
+  color: #00669F;
+}
+body header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+body header div {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #1CD1B0;
+  grid-column: 1/13;
+  grid-row: 1/2;
+  padding: 2px 0px 2px 10px;
+}
+body header .logo {
+  display: flex;
+  align-items: center;
+  background-color: #00669F;
+  grid-column: 1/13;
+  grid-row: 2/3;
+  text-decoration: none;
+  padding: 0px 0px 0px 10px;
+}
+body header .logo h1 {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+body header nav {
+  background-color: #001D2D;
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 1/13;
+  grid-row: 3/4;
+  padding: 2px 0px;
+}
+body header nav a {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-right: 15px;
+}
+body main {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 50px 0px;
+}
+body main .forms {
+  background-color: #00669F;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  grid-column: 3/11;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto 0.2fr 1fr 1fr 2.5fr 1fr;
+  gap: 25px;
+}
+body main .forms h2 {
+  grid-column: 3/9;
+  grid-row: 1/2;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 72px;
+  text-align: center;
+  color: #FBFFFD;
+}
+body main .forms p {
+  color: #FFFFFF;
+  grid-column: 2/10;
+  grid-row: 2/3;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+}
+body main .forms .nombre {
+  justify-self: flex-end;
+  grid-column: 2/6;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body main .forms .nombre label {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+body main .forms .nombre input {
+  border: 1.53407px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15.3407px;
+  color: #000000;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 18px 10px;
+}
+body main .forms .especie {
+  justify-self: flex-start;
+  grid-column: 6/10;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body main .forms .especie label {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+body main .forms .especie select {
+  border: 1.53407px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15.3407px;
+  color: #000000;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 18px 10px;
+}
+body main .forms .fecha {
+  justify-self: flex-end;
+  grid-column: 2/6;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body main .forms .fecha label {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+body main .forms .fecha input {
+  border: 1.53407px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15.3407px;
+  color: #000000;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 18px 10px;
+}
+body main .forms .archivo {
+  justify-self: flex-start;
+  grid-column: 6/10;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body main .forms .archivo label {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+}
+body main .forms .archivo input[type=file] {
+  transform: scale(1);
+  color: #000000;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 20px 0px;
+}
+body main .forms .area {
+  justify-self: flex-start;
+  grid-column: 2/6;
+  grid-row: 5/6;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+}
+body main .forms .area textarea {
+  border: 1.53407px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  color: #000000;
+  font-weight: 200;
+  font-size: 15px;
+  height: 100%;
+  padding-left: 10px;
+}
+body main .forms .podPer {
+  justify-self: flex-start;
+  grid-column: 6/10;
+  grid-row: 5/6;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+}
+body main .forms .podPer .poderes {
+  display: flex;
+  display: inline-block;
+  flex-direction: column;
+}
+body main .forms .podPer .poderes p {
+  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+body main .forms .podPer .poderes input[type=checkbox] {
+  transform: scale(1.5);
+  margin-left: 5px;
+}
+body main .forms .podPer .poderes label {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 5px;
+}
+body main .forms .podPer hr {
+  border: 1px solid #CCCCCC;
+  margin: 10px 0px;
+}
+body main .forms .podPer .personaje {
+  display: flex;
+  display: inline-block;
+  flex-direction: column;
+}
+body main .forms .podPer .personaje p {
+  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+body main .forms .podPer .personaje input[type=radio] {
+  transform: scale(1.5);
+  margin-left: 5px;
+}
+body main .forms .podPer .personaje label {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 5px;
+}
+body main .forms input[type=submit] {
+  background-color: #1CD1B0;
+  border: none;
+  border-radius: 23px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 700;
+  grid-column: 3/9;
+  grid-row: 6/7;
+  padding: 15px 120px;
+  cursor: pointer;
+}
+body main .forms input[type=submit]:hover {
+  background-color: #D1891C;
+  color: #CCCCCC;
+}
+body footer {
+  background-color: #00669F;
+  grid-column: 1/13;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+body footer .github {
+  grid-column: 11/13;
+  grid-row: 1/2;
+}
+body footer .github img {
+  width: 35%;
+}
+body footer .linkedin {
+  color: #FFFFFF;
+}
+body footer .linkedin .fa-brand {
+  font-size: 30px;
+}
+body footer .derechos {
+  grid-column: 2/12;
+  grid-row: 1/2;
+  color: #fff9f9;
+  font-size: 0.65rem;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+@media (max-width: 850px) {
+  body main .forms {
+    grid-template-rows: repeat(9, auto);
+    gap: 0px;
+    row-gap: 20px;
+  }
+  body main .forms h2 {
+    font-size: 35px;
+    grid-column: 2/10;
+    grid-row: 1/2;
+  }
+  body main .forms p {
+    font-size: 15px;
+    grid-column: 2/10;
+    grid-row: 2/3;
+  }
+  body main .forms .nombre {
+    grid-column: 2/10;
+    grid-row: 3/4;
+  }
+  body main .forms .nombre label {
+    font-size: 17px;
+  }
+  body main .forms .nombre input {
+    font-size: 17px;
+    padding: 16px 10px;
+  }
+  body main .forms .especie {
+    grid-column: 2/10;
+    grid-row: 4/5;
+  }
+  body main .forms .especie label {
+    font-size: 17px;
+  }
+  body main .forms .especie select {
+    font-size: 17px;
+    padding: 16px 10px;
+  }
+  body main .forms .fecha {
+    grid-column: 2/10;
+    grid-row: 5/6;
+  }
+  body main .forms .fecha label {
+    font-size: 17px;
+  }
+  body main .forms .fecha input {
+    font-size: 17px;
+    padding: 16px 10px;
+  }
+  body main .forms .archivo {
+    grid-column: 2/10;
+    grid-row: 6/7;
+    margin-top: 15px;
+  }
+  body main .forms .archivo label {
+    font-size: 17px;
+  }
+  body main .forms .archivo input[type=file] {
+    font-size: 13px;
+    padding: 0px 0px;
+  }
+  body main .forms .area {
+    grid-column: 2/10;
+    grid-row: 7/8;
+  }
+  body main .forms .podPer {
+    grid-column: 2/9;
+    grid-row: 8/9;
+    margin-top: 70px;
+  }
+  body main .forms .podPer .poderes p {
+    font-size: 16px;
+  }
+  body main .forms .podPer .poderes label {
+    font-size: 13px;
+  }
+  body main .forms .podPer .personaje p {
+    font-size: 16px;
+  }
+  body main .forms .podPer .personaje label {
+    font-size: 16px;
+  }
+  body main .forms input[type=submit] {
+    font-size: 35px;
+    grid-column: 3/9;
+    grid-row: 9/10;
+    padding: 5px 30px;
+    margin-bottom: 30px;
+  }
+  body footer img {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */
